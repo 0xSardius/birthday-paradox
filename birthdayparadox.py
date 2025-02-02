@@ -31,12 +31,15 @@ This program does a Monte Carlo simulation (that is, a simulation that does a ra
 """)
 
 # Set up a tuple of month names in order
-MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+
+max_num_birthdays = 200
 
 while True:
-    print("How many birthdays shall I generate? (Max 100)")
+    print(f"How many birthdays shall I generate? (Max {max_num_birthdays})")
     response = input("> ")
-    if response.isdecimal() and (0 < int(response) <= 100):
+    if response.isdecimal() and (0 < int(response) <= max_num_birthdays):
         numBDays = int(response)
         break # User has entered a valid amount
 
